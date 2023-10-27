@@ -1,15 +1,18 @@
 #!/usr/bin/env bash
-# Displays "Best School" 10 times using a while loop.
-# On the 9th iteration, "Hi" before "Best School".
+#Write a Bash script that loops from 1 to 10 and:
+#      displays bad luck for the 4th loop iteration.
+#      displays good luck for the 8th loop iteration.
+#      displays Best School for the other iterations.
 
-count=0
-
-while [ $count -lt 10 ]
+i=1
+while [ $i -le 10 ]
 do
-  if [ $count -eq 9 ]
-  then
-    echo "Hi"
-  fi
-  echo "Best School"
-  (( count++ ))
+	if [ $i -eq 4 ]; then
+	   echo "bad luck"
+	elif [ $i -eq 8 ]; then
+	   echo "good luck"
+	else
+	   echo "Best School"
+	fi
+	i=$((i+1))
 done
